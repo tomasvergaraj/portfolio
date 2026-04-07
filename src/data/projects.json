@@ -1,0 +1,209 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "slug": "ecommerce-platform",
+      "shortDescription": "Plataforma completa de comercio electrónico con carrito de compras, pasarela de pagos y panel de administración.",
+      "fullDescription": "Una aplicación web completa de e-commerce construida con las últimas tecnologías. Incluye autenticación de usuarios, gestión de productos, carrito de compras persistente, integración con Stripe para pagos, y un dashboard administrativo completo con analíticas en tiempo real.",
+      "problem": "Las pequeñas empresas necesitan una solución escalable y moderna para vender sus productos en línea sin depender de plataformas de terceros que cobran altas comisiones.",
+      "solution": "Desarrollé una plataforma personalizable que permite a los negocios tener control total sobre su tienda online, con todas las funcionalidades necesarias para gestionar inventario, procesar pagos y analizar ventas.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Stripe",
+        "Tailwind CSS",
+        "Redux Toolkit"
+      ],
+      "features": [
+        "Autenticación JWT con refresh tokens",
+        "Carrito de compras persistente",
+        "Integración completa con Stripe",
+        "Panel de administración con analíticas",
+        "Búsqueda y filtros avanzados",
+        "Sistema de reseñas y calificaciones",
+        "Notificaciones en tiempo real",
+        "Responsive design"
+      ],
+      "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://demo-ecommerce.example.com",
+      "repoUrl": "https://github.com/usuario/ecommerce-platform",
+      "category": "Full Stack"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "slug": "task-management-app",
+      "shortDescription": "Aplicación de gestión de tareas y proyectos con colaboración en tiempo real y sistema de notificaciones.",
+      "fullDescription": "Una herramienta de productividad completa inspirada en Trello y Asana. Permite crear tableros, listas y tarjetas, asignar tareas a miembros del equipo, establecer fechas límite y recibir notificaciones en tiempo real.",
+      "problem": "Los equipos remotos necesitan una forma eficiente de coordinar tareas y proyectos sin la complejidad de herramientas empresariales costosas.",
+      "solution": "Creé una aplicación intuitiva con drag-and-drop, colaboración en tiempo real mediante WebSockets, y un sistema de notificaciones que mantiene a todos sincronizados.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Firebase",
+        "React Beautiful DND",
+        "Zustand",
+        "TailwindCSS",
+        "React Query"
+      ],
+      "features": [
+        "Drag and drop para reorganizar tareas",
+        "Colaboración en tiempo real",
+        "Sistema de notificaciones",
+        "Filtros y búsqueda avanzada",
+        "Adjuntar archivos a tareas",
+        "Comentarios y menciones",
+        "Vista de calendario",
+        "Temas claro/oscuro"
+      ],
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://taskflow-eight-sable.vercel.app/",
+      "repoUrl": "https://github.com/tomasvergaraj/taskflow",
+      "category": "Frontend"
+    },
+    {
+      "id": 3,
+      "title": "Social Media Dashboard",
+      "slug": "social-media-dashboard",
+      "shortDescription": "Dashboard analítico para redes sociales con visualización de métricas y generación de reportes.",
+      "fullDescription": "Un dashboard completo que se conecta con las APIs de diferentes redes sociales para mostrar métricas unificadas, generar insights automáticos y crear reportes personalizados con visualizaciones interactivas.",
+      "problem": "Los community managers y marketers necesitan revisar múltiples plataformas para obtener una visión completa del rendimiento en redes sociales.",
+      "solution": "Desarrollé un dashboard centralizado que integra datos de múltiples redes sociales, proporcionando visualizaciones interactivas y reportes automáticos con insights accionables.",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Chart.js",
+        "TailwindCSS",
+        "NextAuth.js"
+      ],
+      "features": [
+        "Integración con múltiples redes sociales",
+        "Visualizaciones interactivas de datos",
+        "Generación automática de reportes",
+        "Comparación de períodos",
+        "Exportación a PDF/Excel",
+        "Programación de posts",
+        "Análisis de sentimientos",
+        "Predicciones con ML"
+      ],
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://demo-social-dashboard.example.com",
+      "repoUrl": "https://github.com/usuario/social-dashboard",
+      "category": "Full Stack"
+    },
+    {
+      "id": 4,
+      "title": "Weather Forecast App",
+      "slug": "weather-forecast-app",
+      "shortDescription": "Aplicación de pronóstico del tiempo con geolocalización, mapas interactivos y alertas personalizadas.",
+      "fullDescription": "Una aplicación meteorológica moderna que proporciona pronósticos precisos, mapas de radar interactivos, alertas climáticas personalizadas y análisis históricos del clima.",
+      "problem": "Las aplicaciones de clima tradicionales suelen ser complejas y están llenas de publicidad, dificultando el acceso rápido a información precisa.",
+      "solution": "Creé una aplicación minimalista y rápida que muestra la información esencial del clima con una interfaz hermosa, mapas interactivos y la opción de recibir alertas personalizadas.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "OpenWeather API",
+        "Mapbox GL",
+        "Recharts",
+        "TailwindCSS",
+        "PWA"
+      ],
+      "features": [
+        "Geolocalización automática",
+        "Pronóstico por hora y por día",
+        "Mapas de radar interactivos",
+        "Alertas meteorológicas",
+        "Múltiples ubicaciones guardadas",
+        "Gráficos de temperatura y precipitación",
+        "Modo offline (PWA)",
+        "Notificaciones push"
+      ],
+      "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://weather-forecast-app-tau-two.vercel.app/",
+      "repoUrl": "https://github.com/tomasvergaraj/weather-forecast-app",
+      "category": "Frontend"
+    },
+    {
+      "id": 5,
+      "title": "Sistema de Sumariales",
+      "slug": "sistema-sumariales",
+      "shortDescription": "Sistema web para registrar, controlar y dar seguimiento a procesos sumariales con gestión de plazos legales y trazabilidad.",
+      "fullDescription": "Un sistema privado diseñado para la gestión integral de procesos sumariales. Permite registrar casos, controlar plazos legales automáticamente, gestionar cambios de fiscal, dar seguimiento a las etapas del proceso y mantener una trazabilidad completa de todas las acciones.",
+      "problem": "La gestión manual de procesos sumariales es propensa a errores, dificulta el control de plazos legales y carece de trazabilidad adecuada para auditorías.",
+      "solution": "Desarrollé un sistema web completo que automatiza el cálculo de plazos, gestiona el ciclo de fiscales, implementa flujos de trabajo para revisiones legales y proporciona notificaciones en tiempo real con exportación de datos.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Firebase",
+        "Firestore",
+        "TailwindCSS",
+        "Zustand",
+        "React Hook Form",
+        "Zod"
+      ],
+      "features": [
+        "Cálculo automático de plazos legales",
+        "Gestión de ciclo de fiscales",
+        "Determinación automática de etapas del proceso",
+        "Sistema de notificaciones en tiempo real",
+        "Filtros avanzados y búsqueda",
+        "Exportación a Excel",
+        "Control de acceso basado en roles",
+        "Historial completo de cambios"
+      ],
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://sistema-sumariales-demo.vercel.app/",
+      "repoUrl": "https://github.com/tomasvergaraj/sistema-sumariales",
+      "category": "Full Stack",
+      "demoCredentials": [
+        {
+          "email": "admin@demo.com",
+          "password": "123456",
+          "role": "Admin"
+        },
+        {
+          "email": "juridica@demo.com",
+          "password": "123456",
+          "role": "Jurídica"
+        },
+        {
+          "email": "viewer@demo.com",
+          "password": "123456",
+          "role": "Viewer"
+        }
+      ]
+    }
+  ]
+}
