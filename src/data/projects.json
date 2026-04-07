@@ -2,68 +2,57 @@
   "projects": [
     {
       "id": 1,
-      "title": "E-Commerce Platform",
-      "slug": "ecommerce-platform",
-      "shortDescription": "Plataforma completa de comercio electrónico con carrito de compras, pasarela de pagos y panel de administración.",
-      "fullDescription": "Una aplicación web completa de e-commerce construida con las últimas tecnologías. Incluye autenticación de usuarios, gestión de productos, carrito de compras persistente, integración con Stripe para pagos, y un dashboard administrativo completo con analíticas en tiempo real.",
-      "problem": "Las pequeñas empresas necesitan una solución escalable y moderna para vender sus productos en línea sin depender de plataformas de terceros que cobran altas comisiones.",
-      "solution": "Desarrollé una plataforma personalizable que permite a los negocios tener control total sobre su tienda online, con todas las funcionalidades necesarias para gestionar inventario, procesar pagos y analizar ventas.",
+      "title": "E-Commerce",
+      "slug": "e-commerce",
+      "shortDescription": "Tienda online genérica adaptable a cualquier tipo de empresa, con carrito de compras, catálogo de productos y checkout.",
+      "fullDescription": "Aplicación web de e-commerce construida con TypeScript y React. Permite a cualquier negocio contar con una tienda online moderna, con catálogo de productos, carrito de compras persistente, filtros por categoría y un flujo de checkout limpio. Diseñada para ser fácilmente personalizable y adaptable a distintos rubros.",
+      "problem": "Las pequeñas y medianas empresas necesitan una solución propia para vender en línea sin depender de marketplaces que cobran comisiones altas y limitan la personalización.",
+      "solution": "Desarrollé una tienda online reutilizable con una interfaz moderna, catálogo dinámico y carrito de compras, pensada para adaptarse a cualquier tipo de producto o servicio.",
       "technologies": [
         "React",
         "TypeScript",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Stripe",
-        "Tailwind CSS",
-        "Redux Toolkit"
+        "Vite",
+        "TailwindCSS"
       ],
       "features": [
-        "Autenticación JWT con refresh tokens",
+        "Catálogo de productos con filtros por categoría",
         "Carrito de compras persistente",
-        "Integración completa con Stripe",
-        "Panel de administración con analíticas",
-        "Búsqueda y filtros avanzados",
-        "Sistema de reseñas y calificaciones",
-        "Notificaciones en tiempo real",
-        "Responsive design"
+        "Flujo de checkout paso a paso",
+        "Diseño responsive",
+        "Modo claro/oscuro"
       ],
-      "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
       "gallery": [
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop"
       ],
-      "demoUrl": "https://demo-ecommerce.example.com",
-      "repoUrl": "https://github.com/usuario/ecommerce-platform",
-      "category": "Full Stack"
+      "demoUrl": "https://e-commerce-rouge-kappa.vercel.app",
+      "repoUrl": "https://github.com/tomasvergaraj/e-commerce",
+      "category": "Frontend"
     },
     {
       "id": 2,
-      "title": "Task Management App",
+      "title": "TaskFlow",
       "slug": "task-management-app",
-      "shortDescription": "Aplicación de gestión de tareas y proyectos con colaboración en tiempo real y sistema de notificaciones.",
-      "fullDescription": "Una herramienta de productividad completa inspirada en Trello y Asana. Permite crear tableros, listas y tarjetas, asignar tareas a miembros del equipo, establecer fechas límite y recibir notificaciones en tiempo real.",
-      "problem": "Los equipos remotos necesitan una forma eficiente de coordinar tareas y proyectos sin la complejidad de herramientas empresariales costosas.",
-      "solution": "Creé una aplicación intuitiva con drag-and-drop, colaboración en tiempo real mediante WebSockets, y un sistema de notificaciones que mantiene a todos sincronizados.",
+      "shortDescription": "Aplicación de gestión de tareas y proyectos inspirada en Trello, con tableros, listas y drag & drop.",
+      "fullDescription": "Una herramienta de productividad completa inspirada en Trello. Permite crear tableros, listas y tarjetas, reorganizar tareas con drag and drop, y mantener el control de proyectos de forma visual e intuitiva.",
+      "problem": "Los equipos y personas que trabajan en múltiples proyectos necesitan una forma visual y simple de organizar tareas sin la complejidad de herramientas empresariales costosas.",
+      "solution": "Creé una aplicación con tableros Kanban, drag-and-drop fluido y una interfaz limpia que facilita la gestión del trabajo sin curva de aprendizaje.",
       "technologies": [
         "React",
         "TypeScript",
         "Firebase",
         "React Beautiful DND",
         "Zustand",
-        "TailwindCSS",
-        "React Query"
+        "TailwindCSS"
       ],
       "features": [
+        "Tableros Kanban personalizables",
         "Drag and drop para reorganizar tareas",
-        "Colaboración en tiempo real",
-        "Sistema de notificaciones",
-        "Filtros y búsqueda avanzada",
-        "Adjuntar archivos a tareas",
-        "Comentarios y menciones",
-        "Vista de calendario",
-        "Temas claro/oscuro"
+        "Creación y edición de tarjetas",
+        "Persistencia de datos en tiempo real",
+        "Modo claro/oscuro"
       ],
       "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop",
       "gallery": [
@@ -71,73 +60,65 @@
         "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&h=600&fit=crop"
       ],
-      "demoUrl": "https://taskflow-eight-sable.vercel.app/",
+      "demoUrl": "https://taskflow-chi-two.vercel.app/",
       "repoUrl": "https://github.com/tomasvergaraj/taskflow",
       "category": "Frontend"
     },
     {
       "id": 3,
-      "title": "Social Media Dashboard",
-      "slug": "social-media-dashboard",
-      "shortDescription": "Dashboard analítico para redes sociales con visualización de métricas y generación de reportes.",
-      "fullDescription": "Un dashboard completo que se conecta con las APIs de diferentes redes sociales para mostrar métricas unificadas, generar insights automáticos y crear reportes personalizados con visualizaciones interactivas.",
-      "problem": "Los community managers y marketers necesitan revisar múltiples plataformas para obtener una visión completa del rendimiento en redes sociales.",
-      "solution": "Desarrollé un dashboard centralizado que integra datos de múltiples redes sociales, proporcionando visualizaciones interactivas y reportes automáticos con insights accionables.",
+      "title": "Arcade Invaders",
+      "slug": "arcade-invaders",
+      "shortDescription": "Videojuego web 2D inspirado en Space Invaders con mecánicas arcade modernas, construido con React y TypeScript.",
+      "fullDescription": "Arcade Invaders es un videojuego web 2D que toma la base clásica de Space Invaders y la moderniza con una capa arcade actual. Desarrollado completamente con React y TypeScript, corre directamente en el navegador sin necesidad de plugins. Incluye sistema de puntuación, oleadas de enemigos y efectos visuales retro.",
+      "problem": "Los juegos clásicos de arcade son difíciles de reproducir en la web moderna manteniendo buen rendimiento y una experiencia fluida.",
+      "solution": "Construí el juego usando React y el loop de animación del navegador, logrando un rendimiento fluido con lógica de colisiones, IA de enemigos y sistema de puntuación completo.",
       "technologies": [
-        "Next.js",
+        "React",
         "TypeScript",
-        "Prisma",
-        "PostgreSQL",
-        "Chart.js",
-        "TailwindCSS",
-        "NextAuth.js"
+        "Vite",
+        "CSS Animations",
+        "Canvas API"
       ],
       "features": [
-        "Integración con múltiples redes sociales",
-        "Visualizaciones interactivas de datos",
-        "Generación automática de reportes",
-        "Comparación de períodos",
-        "Exportación a PDF/Excel",
-        "Programación de posts",
-        "Análisis de sentimientos",
-        "Predicciones con ML"
+        "Mecánicas clásicas de Space Invaders",
+        "Sistema de puntuación y high score",
+        "Oleadas de enemigos progresivas",
+        "Efectos visuales y sonoros retro",
+        "Controles de teclado",
+        "Responsive para distintas pantallas"
       ],
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop",
       "gallery": [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop"
+        "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=800&h=600&fit=crop"
       ],
-      "demoUrl": "https://demo-social-dashboard.example.com",
-      "repoUrl": "https://github.com/usuario/social-dashboard",
-      "category": "Full Stack"
+      "demoUrl": "https://arcade-invaders.vercel.app",
+      "repoUrl": "https://github.com/tomasvergaraj/arcade-invaders",
+      "category": "Frontend"
     },
     {
       "id": 4,
       "title": "Weather Forecast App",
       "slug": "weather-forecast-app",
-      "shortDescription": "Aplicación de pronóstico del tiempo con geolocalización, mapas interactivos y alertas personalizadas.",
-      "fullDescription": "Una aplicación meteorológica moderna que proporciona pronósticos precisos, mapas de radar interactivos, alertas climáticas personalizadas y análisis históricos del clima.",
-      "problem": "Las aplicaciones de clima tradicionales suelen ser complejas y están llenas de publicidad, dificultando el acceso rápido a información precisa.",
-      "solution": "Creé una aplicación minimalista y rápida que muestra la información esencial del clima con una interfaz hermosa, mapas interactivos y la opción de recibir alertas personalizadas.",
+      "shortDescription": "Aplicación de pronóstico del tiempo con geolocalización y consulta de clima en tiempo real.",
+      "fullDescription": "Una aplicación meteorológica moderna que proporciona pronósticos precisos usando geolocalización automática. Muestra temperatura, humedad, viento y pronóstico por hora de forma visual y clara, con una interfaz minimalista libre de publicidad.",
+      "problem": "Las aplicaciones de clima tradicionales son complejas, lentas o están llenas de publicidad, dificultando el acceso rápido a información precisa.",
+      "solution": "Creé una aplicación minimalista y rápida que muestra la información esencial del clima con una interfaz limpia, usando geolocalización y la API de OpenWeather.",
       "technologies": [
         "React",
         "TypeScript",
         "OpenWeather API",
-        "Mapbox GL",
         "Recharts",
         "TailwindCSS",
-        "PWA"
+        "Vite"
       ],
       "features": [
         "Geolocalización automática",
         "Pronóstico por hora y por día",
-        "Mapas de radar interactivos",
-        "Alertas meteorológicas",
-        "Múltiples ubicaciones guardadas",
-        "Gráficos de temperatura y precipitación",
-        "Modo offline (PWA)",
-        "Notificaciones push"
+        "Temperatura, humedad y viento",
+        "Búsqueda por ciudad",
+        "Diseño responsive"
       ],
       "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
       "gallery": [
@@ -204,6 +185,107 @@
           "role": "Viewer"
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Minimarket POS",
+      "slug": "minimarket-pos",
+      "shortDescription": "Sistema de punto de venta (POS) escalable para minimarket, desarrollado con Electron para uso en escritorio.",
+      "fullDescription": "Aplicación de escritorio multiplataforma para punto de venta en minimarket. Construida con Electron y TypeScript, permite gestionar ventas, productos e inventario desde cualquier computador sin depender de conexión a internet. Pensada para ser escalable y adaptable a distintos tamaños de negocio.",
+      "problem": "Los minimarkets necesitan una solución de punto de venta accesible, rápida y que funcione de forma confiable sin depender de internet, a un costo razonable.",
+      "solution": "Desarrollé una aplicación de escritorio con Electron que centraliza ventas, inventario y productos en una sola interfaz, con operación offline y posibilidad de escalar a múltiples cajas.",
+      "technologies": [
+        "TypeScript",
+        "Electron",
+        "React",
+        "TailwindCSS"
+      ],
+      "features": [
+        "Registro y procesamiento de ventas",
+        "Gestión de inventario y productos",
+        "Operación offline (sin internet)",
+        "Generación de boletas",
+        "Historial de transacciones",
+        "Interfaz optimizada para teclado y escáner"
+      ],
+      "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "",
+      "repoUrl": "https://github.com/tomasvergaraj/minimarket-pos",
+      "category": "Full Stack"
+    },
+    {
+      "id": 7,
+      "title": "Nexo Fitness",
+      "slug": "nexo-fitness",
+      "shortDescription": "SaaS de gestión para gimnasios con administración de socios, planes y pagos, desplegado con Docker.",
+      "fullDescription": "Nexo Fitness es un SaaS diseñado para la administración integral de gimnasios. Permite gestionar socios, planes de membresía y pagos desde una plataforma web centralizada. El sistema está containerizado con Docker y Docker Compose para facilitar el despliegue en cualquier entorno.",
+      "problem": "Los gimnasios pequeños y medianos carecen de herramientas accesibles para gestionar socios, controlar vencimientos de membresías y administrar pagos de forma eficiente.",
+      "solution": "Desarrollé un SaaS completo con panel de administración, gestión de socios y control de membresías, containerizado con Docker para un despliegue rápido y escalable.",
+      "technologies": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "Docker",
+        "Docker Compose",
+        "TailwindCSS"
+      ],
+      "features": [
+        "Gestión de socios y membresías",
+        "Control de vencimientos y alertas",
+        "Administración de planes y pagos",
+        "Panel de estadísticas",
+        "Despliegue containerizado con Docker",
+        "Multi-tenant (soporte para múltiples gimnasios)"
+      ],
+      "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "",
+      "repoUrl": "https://github.com/tomasvergaraj/nexo-fitness",
+      "category": "Full Stack"
+    },
+    {
+      "id": 8,
+      "title": "PDF Transcriptor",
+      "slug": "pdf-transcriptor",
+      "shortDescription": "App web fullstack que extrae y reconstruye el contenido de PDFs digitales o escaneados, con mejora opcional por IA.",
+      "fullDescription": "Aplicación web fullstack que recibe archivos PDF (digitales o escaneados), extrae su contenido preservando el layout y los estilos originales, y genera un documento reconstruido limpio. Incluye la opción de omitir timbres, sellos y firmas, y una mejora opcional del texto mediante inteligencia artificial.",
+      "problem": "Digitalizar o limpiar documentos PDF escaneados es un proceso manual y tedioso, especialmente cuando se necesita preservar el formato original o eliminar elementos como sellos y firmas.",
+      "solution": "Construí una app fullstack en Python que automatiza la extracción de contenido desde PDFs, con reconocimiento de texto (OCR), preservación del layout y una capa de IA para mejorar la calidad del resultado.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "OCR",
+        "OpenAI API",
+        "TailwindCSS"
+      ],
+      "features": [
+        "Soporte para PDFs digitales y escaneados",
+        "Extracción de contenido preservando layout",
+        "Opción de omitir timbres, sellos y firmas",
+        "Mejora del texto con IA",
+        "Descarga del documento reconstruido",
+        "Interfaz web simple y rápida"
+      ],
+      "image": "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1553484771-371a605b060b?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "",
+      "repoUrl": "https://github.com/tomasvergaraj/pdf-transcriptor",
+      "category": "Full Stack"
     }
   ]
 }
