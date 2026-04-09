@@ -4,20 +4,45 @@ import ProjectCard from '../components/ProjectCard';
 import projectsData from '../data/projects.json';
 import { Project } from '../types';
 
+const featuredOrder = [
+  'nexo-fitness',
+  'arcade-invaders',
+  'sistema-sumariales',
+  'minimarket-pos',
+];
+
 const Projects = () => {
   const [filter, setFilter] = useState<string>('all');
   const projects = projectsData.projects as Project[];
+  const sortedProjects = [...projects].sort((projectA, projectB) => {
+    const projectAPriority = featuredOrder.indexOf(projectA.slug);
+    const projectBPriority = featuredOrder.indexOf(projectB.slug);
 
-  const categories = ['all', ...Array.from(new Set(projects.map(p => p.category)))];
+    if (projectAPriority === -1 && projectBPriority === -1) {
+      return 0;
+    }
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+    if (projectAPriority === -1) {
+      return 1;
+    }
+
+    if (projectBPriority === -1) {
+      return -1;
+    }
+
+    return projectAPriority - projectBPriority;
+  });
+
+  const categories = ['all', ...Array.from(new Set(sortedProjects.map((project) => project.category)))];
+
+  const filteredProjects =
+    filter === 'all'
+      ? sortedProjects
+      : sortedProjects.filter((project) => project.category === filter);
 
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="container-custom">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +56,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Filtros */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,14 +77,12 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        {/* Grid de proyectos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {/* Mensaje si no hay proyectos */}
         {filteredProjects.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -73,7 +95,6 @@ const Projects = () => {
           </motion.div>
         )}
 
-        {/* Estadísticas */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
