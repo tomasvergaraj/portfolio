@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 import projectsData from '../data/projects.json';
 import { Project } from '../types';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const featuredOrder = [
   'nexo-fitness',
@@ -12,25 +13,18 @@ const featuredOrder = [
 ];
 
 const Projects = () => {
+  usePageTitle('Proyectos');
+
   const [filter, setFilter] = useState<string>('all');
   const projects = projectsData.projects as Project[];
-  const sortedProjects = [...projects].sort((projectA, projectB) => {
-    const projectAPriority = featuredOrder.indexOf(projectA.slug);
-    const projectBPriority = featuredOrder.indexOf(projectB.slug);
 
-    if (projectAPriority === -1 && projectBPriority === -1) {
-      return 0;
-    }
-
-    if (projectAPriority === -1) {
-      return 1;
-    }
-
-    if (projectBPriority === -1) {
-      return -1;
-    }
-
-    return projectAPriority - projectBPriority;
+  const sortedProjects = [...projects].sort((a, b) => {
+    const aPriority = featuredOrder.indexOf(a.slug);
+    const bPriority = featuredOrder.indexOf(b.slug);
+    if (aPriority === -1 && bPriority === -1) return 0;
+    if (aPriority === -1) return 1;
+    if (bPriority === -1) return -1;
+    return aPriority - bPriority;
   });
 
   const categories = ['all', ...Array.from(new Set(sortedProjects.map((project) => project.category)))];
@@ -41,90 +35,65 @@ const Projects = () => {
       : sortedProjects.filter((project) => project.category === filter);
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="pt-32 pb-24">
       <div className="container-custom">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          transition={{ duration: 0.5 }}
+          className="mb-20 max-w-3xl"
         >
-          <h1 className="section-title mb-4">Mis Proyectos</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Una colección de proyectos en los que he trabajado, desde aplicaciones web
-            completas hasta componentes y herramientas especializadas.
+          <p className="eyebrow mb-6">Proyectos</p>
+          <h1 className="text-h1 font-medium tracking-tight text-ink-900 dark:text-ink-50 mb-6">
+            Una colección de trabajo reciente.
+          </h1>
+          <p className="text-lg text-ink-600 dark:text-ink-300 leading-relaxed">
+            Aplicaciones web completas, productos SaaS y herramientas
+            especializadas — desde clientes reales hasta proyectos personales.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex flex-wrap gap-1 mb-16 border-b border-ink-200 dark:border-ink-800"
         >
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-2 rounded-lg font-medium transition-all ${
+              className={`relative px-4 py-3 font-mono text-sm uppercase tracking-wider transition-colors ${
                 filter === category
-                  ? 'bg-primary-600 text-white shadow-lg scale-105'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  ? 'text-ink-900 dark:text-ink-100'
+                  : 'text-ink-500 dark:text-ink-400 hover:text-ink-900 dark:hover:text-ink-100'
               }`}
             >
               {category === 'all' ? 'Todos' : category}
+              {filter === category && (
+                <motion.div
+                  layoutId="projects-tab-indicator"
+                  className="absolute -bottom-px left-0 right-0 h-px bg-ink-900 dark:bg-ink-100"
+                  transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                />
+              )}
             </button>
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
         {filteredProjects.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center py-12"
-          >
-            <p className="text-gray-500 dark:text-gray-400 text-lg">
-              No hay proyectos en esta categoría
+          <div className="py-24 text-center">
+            <p className="text-ink-500 dark:text-ink-400">
+              No hay proyectos en esta categoría.
             </p>
-          </motion.div>
+          </div>
         )}
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {[
-            { label: 'Proyectos Completados', value: '15+' },
-            { label: 'Clientes Satisfechos', value: '20+' },
-            { label: 'Líneas de Código', value: '50K+' },
-            { label: 'Tazas de Café', value: '∞' },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </div>
   );

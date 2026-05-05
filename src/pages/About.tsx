@@ -1,209 +1,207 @@
 import { motion } from 'framer-motion';
-import { Code2, Palette, Database, Wrench, Award, Briefcase, Download } from 'lucide-react';
+import { Download, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 const About = () => {
+  usePageTitle('Sobre mí');
+
   const skills = [
     {
       category: 'Frontend',
-      icon: Palette,
-      items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Redux', 'Vue.js'],
+      items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
     },
     {
       category: 'Backend',
-      icon: Database,
-      items: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'Prisma'],
+      items: ['Node.js', 'Express', 'PostgreSQL', 'Prisma'],
     },
     {
       category: 'Herramientas',
-      icon: Wrench,
-      items: ['Git', 'Docker', 'AWS', 'Vercel', 'Postman'],
+      items: ['Git', 'Docker', 'Vercel'],
     },
   ];
 
-  const experience = [
+  const experience: {
+    role: string;
+    company: string;
+    period: string;
+    description: string;
+    link?: string;
+  }[] = [
+    {
+      role: 'Fundador & Full Stack Developer',
+      company: 'Nexo Software SpA',
+      period: '2026 — Presente',
+      description:
+        'Fundé Nexo Software SpA, empresa enfocada en desarrollo de software a medida. Lancé Nexo Fitness, SaaS para gestión de gimnasios, como primer producto propio.',
+      link: 'https://nexosoftware.cl/',
+    },
     {
       role: 'Junior Full Stack Developer',
       company: 'HBQP',
-      period: '2025 - Presente',
+      period: '2025 — Presente',
       description: 'Desarrollo de aplicaciones web escalables con React y Node.js.',
     },
   ];
 
   return (
-    <div className="min-h-screen pt-24 pb-16">
+    <div className="pt-32 pb-24">
       <div className="container-custom">
-        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          transition={{ duration: 0.5 }}
+          className="mb-24 max-w-3xl"
         >
-          <h1 className="section-title mb-6">Sobre Mí</h1>
-          <div className="flex justify-center mb-8">
-            <div className="relative">
-              <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary-400 to-purple-600 p-1">
-                <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <Code2 className="w-16 h-16 text-primary-600 dark:text-primary-400" />
-                </div>
-              </div>
-              <div className="absolute -bottom-2 -right-2 bg-primary-600 text-white rounded-full p-2">
-                <Award className="w-6 h-6" />
-              </div>
-            </div>
-          </div>
+          <p className="eyebrow mb-6">Sobre mí</p>
+          <h1 className="text-h1 font-medium tracking-tight text-ink-900 dark:text-ink-50">
+            Construyo software con foco en usuarios reales.
+          </h1>
         </motion.div>
 
-        {/* Bio */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.section
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto mb-20"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="grid md:grid-cols-12 gap-12 mb-32"
         >
-          <div className="card p-8">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-              ¡Hola! 👋
-            </h2>
-            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
-              <p>
-                Soy un desarrollador full stack apasionado por crear experiencias web excepcionales.
-                Con más de 3 años de experiencia en la industria, he tenido el privilegio de trabajar
-                en proyectos diversos.
-              </p>
-              <p>
-                Mi enfoque se centra en escribir código limpio, mantenible y escalable, siempre
-                buscando las mejores prácticas y las tecnologías más modernas. Me encanta resolver
-                problemas complejos y transformar ideas en productos digitales que las personas aman usar.
-              </p>
-              <p>
-                Cuando no estoy programando, puedes encontrarme aprendiendo nuevas tecnologías,
-                contribuyendo a proyectos de código abierto.
-              </p>
-            </div>
+          <div className="md:col-span-3">
+            <p className="eyebrow">Bio</p>
           </div>
-        </motion.div>
+          <div className="md:col-span-9 space-y-6 text-lg text-ink-700 dark:text-ink-300 leading-relaxed max-w-prose-narrow">
+            <p>
+              Soy desarrollador full stack y fundador de{' '}
+              <a
+                href="https://nexosoftware.cl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-900 dark:text-ink-100 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-900 dark:hover:decoration-ink-100"
+              >
+                Nexo Software SpA
+              </a>
+              , empresa enfocada en desarrollo de software a medida para
+              empresas que necesitan soluciones digitales reales y mantenibles.
+            </p>
+            <p>
+              Desde Nexo Software construyo proyectos para clientes y también
+              productos propios, como{' '}
+              <a
+                href="https://nexofitness.cl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-900 dark:text-ink-100 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-900 dark:hover:decoration-ink-100"
+              >
+                Nexo Fitness
+              </a>
+              , un SaaS para la gestión integral de gimnasios.
+            </p>
+            <p>
+              Mi enfoque está en escribir código limpio, mantenible y escalable,
+              aplicando buenas prácticas y tecnologías modernas para transformar
+              ideas en productos digitales que la gente realmente quiere usar.
+            </p>
+          </div>
+        </motion.section>
 
-        {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.section
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
+          transition={{ duration: 0.5 }}
+          className="grid md:grid-cols-12 gap-12 mb-32 pt-16 border-t border-ink-200 dark:border-ink-800"
         >
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
-            Habilidades Técnicas
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {skills.map((skillGroup, index) => (
-              <motion.div
-                key={skillGroup.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="card p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30">
-                    <skillGroup.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                    {skillGroup.category}
-                  </h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+          <div className="md:col-span-3">
+            <p className="eyebrow">Stack</p>
+          </div>
+          <div className="md:col-span-9 space-y-10">
+            {skills.map((group) => (
+              <div key={group.category} className="grid sm:grid-cols-12 gap-6 items-baseline">
+                <h3 className="sm:col-span-3 font-mono text-sm text-ink-500 dark:text-ink-400 uppercase tracking-wider">
+                  {group.category}
+                </h3>
+                <p className="sm:col-span-9 text-lg text-ink-800 dark:text-ink-100">
+                  {group.items.join(', ')}
+                </p>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </motion.section>
 
-        {/* Experiencia */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.section
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto"
+          transition={{ duration: 0.5 }}
+          className="grid md:grid-cols-12 gap-12 mb-32 pt-16 border-t border-ink-200 dark:border-ink-800"
         >
-          <h2 className="text-3xl font-bold text-center mb-12 gradient-text">
-            Experiencia Profesional
-          </h2>
-          <div className="space-y-8">
+          <div className="md:col-span-3">
+            <p className="eyebrow">Experiencia</p>
+          </div>
+          <div className="md:col-span-9 space-y-12">
             {experience.map((job, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative pl-8 border-l-2 border-primary-600 dark:border-primary-400"
-              >
-                <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary-600 dark:bg-primary-400" />
-                <div className="card p-6">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <Briefcase className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                      {job.role}
-                    </h3>
+              <div key={index} className="grid sm:grid-cols-12 gap-6">
+                <div className="sm:col-span-3 font-mono text-sm text-ink-500 dark:text-ink-400">
+                  {job.period}
+                </div>
+                <div className="sm:col-span-9">
+                  <h3 className="text-xl font-medium text-ink-900 dark:text-ink-50 mb-1">
+                    {job.role}
+                  </h3>
+                  <div className="mb-3">
+                    {job.link ? (
+                      <a
+                        href={job.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-ink-700 dark:text-ink-200 underline underline-offset-4 decoration-ink-300 hover:decoration-ink-900 dark:hover:decoration-ink-100"
+                      >
+                        {job.company}
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    ) : (
+                      <span className="text-ink-700 dark:text-ink-200">{job.company}</span>
+                    )}
                   </div>
-                  <div className="flex flex-wrap gap-3 mb-3">
-                    <span className="text-primary-600 dark:text-primary-400 font-semibold">
-                      {job.company}
-                    </span>
-                    <span className="text-gray-500 dark:text-gray-400">
-                      {job.period}
-                    </span>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300">
+                  <p className="text-ink-600 dark:text-ink-300 leading-relaxed max-w-prose-narrow">
                     {job.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </motion.section>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        <motion.section
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-20 text-center"
+          transition={{ duration: 0.5 }}
+          className="pt-16 border-t border-ink-200 dark:border-ink-800"
         >
-          <div className="card p-12 max-w-2xl mx-auto bg-gradient-to-br from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 border-primary-200 dark:border-primary-800">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-              ¿Quieres saber más?
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Descarga mi CV o contáctame directamente
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="/CV.pdf" 
+          <div className="grid md:grid-cols-12 gap-12 items-center">
+            <div className="md:col-span-7">
+              <h2 className="text-h2 font-medium tracking-tight text-ink-900 dark:text-ink-50 mb-4">
+                ¿Conversamos?
+              </h2>
+              <p className="text-ink-600 dark:text-ink-300 max-w-prose-narrow">
+                Descarga mi CV o escríbeme directamente.
+              </p>
+            </div>
+            <div className="md:col-span-5 flex flex-wrap gap-3 md:justify-end">
+              <a
+                href="/CV.pdf"
                 download="CV-Tomas-Vergara.pdf"
-                className="btn-primary inline-flex items-center gap-2"
+                className="btn-primary"
               >
-                <Download className="w-5 h-5" />
+                <Download className="w-4 h-4" />
                 Descargar CV
               </a>
-              <a href="/contact" className="btn-secondary">
+              <Link to="/contact" className="btn-secondary">
                 Contactar
-              </a>
+              </Link>
             </div>
           </div>
-        </motion.div>
+        </motion.section>
       </div>
     </div>
   );

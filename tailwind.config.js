@@ -8,35 +8,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-        }
+        ink: {
+          50:  '#F4F6F9',
+          100: '#E5EAF1',
+          200: '#C7D0DD',
+          300: '#9FAEC2',
+          400: '#6F8298',
+          500: '#4A5C72',
+          600: '#33475F',
+          700: '#243549',
+          800: '#1E2A3A',
+          900: '#141C28',
+          950: '#0A0F18',
+        },
+        paper: {
+          DEFAULT: '#FAFAF9',
+          dark: '#0E0F11',
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Geist"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'gradient': 'gradient 8s linear infinite',
+      fontSize: {
+        'display': ['clamp(3rem, 8vw, 6.5rem)', { lineHeight: '1', letterSpacing: '-0.04em' }],
+        'h1': ['clamp(2.25rem, 5vw, 3.75rem)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        'h2': ['clamp(1.75rem, 3vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        gradient: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
+      maxWidth: {
+        'prose-narrow': '60ch',
       },
     },
   },

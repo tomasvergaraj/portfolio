@@ -222,8 +222,8 @@
       "id": 7,
       "title": "Nexo Fitness",
       "slug": "nexo-fitness",
-      "shortDescription": "SaaS de gestión para gimnasios con administración de socios, planes y pagos, desplegado con Docker.",
-      "fullDescription": "Nexo Fitness es un SaaS diseñado para la administración integral de gimnasios. Permite gestionar socios, planes de membresía y pagos desde una plataforma web centralizada. El sistema está containerizado con Docker y Docker Compose para facilitar el despliegue en cualquier entorno.",
+      "shortDescription": "Producto SaaS de Nexo Software SpA para la gestión integral de gimnasios: socios, planes, pagos y vencimientos.",
+      "fullDescription": "Nexo Fitness es el primer producto SaaS de Nexo Software SpA, diseñado para la administración integral de gimnasios. Permite gestionar socios, planes de membresía y pagos desde una plataforma web centralizada, ya disponible en producción en nexofitness.cl. El sistema está containerizado con Docker y Docker Compose para facilitar el despliegue y la operación multi-tenant.",
       "problem": "Los gimnasios pequeños y medianos carecen de herramientas accesibles para gestionar socios, controlar vencimientos de membresías y administrar pagos de forma eficiente.",
       "solution": "Desarrollé un SaaS completo con panel de administración, gestión de socios y control de membresías, containerizado con Docker para un despliegue rápido y escalable.",
       "technologies": [
