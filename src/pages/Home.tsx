@@ -5,7 +5,7 @@ import projectsData from '../data/projects.json';
 import { Project } from '../types';
 import { usePageTitle } from '../hooks/usePageTitle';
 
-const FEATURED_SLUGS = ['nexo-fitness', 'arcade-invaders', 'sistema-sumariales'];
+const FEATURED_SLUGS = ['nexo-fitness', 'hambuscador', 'minimarket-pos'];
 
 const Home = () => {
   usePageTitle();
