@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight, Github, Key } from 'lucide-react';
 import projectsData from '../data/projects.json';
 import { Project } from '../types';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { getTechIcon } from '../data/techIcons';
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -59,15 +60,17 @@ const ProjectDetail = () => {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
             )}
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              <Github className="w-4 h-4" />
-              Ver código
-            </a>
+            {project.repoUrl && (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                <Github className="w-4 h-4" />
+                Ver código
+              </a>
+            )}
           </div>
         </motion.div>
 
@@ -151,14 +154,26 @@ const ProjectDetail = () => {
             <div>
               <p className="eyebrow mb-4">Stack</p>
               <ul className="space-y-2">
-                {project.technologies.map((tech) => (
-                  <li
-                    key={tech}
-                    className="text-ink-800 dark:text-ink-100 border-b border-ink-200 dark:border-ink-800 py-2"
-                  >
-                    {tech}
-                  </li>
-                ))}
+                {project.technologies.map((tech) => {
+                  const icon = getTechIcon(tech);
+                  return (
+                    <li
+                      key={tech}
+                      className="flex items-center gap-3 text-ink-800 dark:text-ink-100 border-b border-ink-200 dark:border-ink-800 py-2"
+                    >
+                      {icon && (
+                        <img
+                          src={icon}
+                          alt=""
+                          className="w-4 h-4 object-contain shrink-0"
+                          loading="lazy"
+                          aria-hidden="true"
+                        />
+                      )}
+                      {tech}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 

@@ -328,6 +328,72 @@
       "demoUrl": "https://hambuscador.cl",
       "repoUrl": "https://github.com/tomasvergaraj/hambuscador",
       "category": "Full Stack"
+    },
+    {
+      "id": 10,
+      "title": "Fertomart",
+      "slug": "fertomart-landing",
+      "shortDescription": "Landing premium para empresa de banquetería con 25 años en V Región: galería con lightbox swipeable, reels de video y SEO local agresivo.",
+      "fullDescription": "Landing corporativa construida con Astro para Fertomart, empresa de banquetería con 25 años de experiencia en la Región de Valparaíso. Incluye galería interactiva con carrusel mobile y lightbox swipeable, sección de reels de video estilo redes sociales (cocina, montaje, parrilladas), formulario que arma el mensaje y abre WhatsApp con la cotización lista, panel integrado de reseñas de Google y un trabajo de SEO local profundo apuntado a Hijuelas, Quillota y toda la Quinta Región.",
+      "problem": "Una empresa familiar con 25 años de trayectoria no aparecía en búsquedas locales y no tenía cómo capturar cotizaciones online — todo el contacto era boca a boca.",
+      "solution": "Construí una landing rápida con Astro, optimizada para Core Web Vitals, con schema.org LocalBusiness + FAQ + VideoObject, formulario que abre WhatsApp con el mensaje armado y un panel de reseñas de Google integrado para acumular social proof.",
+      "technologies": [
+        "Astro",
+        "TypeScript",
+        "CSS3",
+        "Vercel",
+        "WhatsApp"
+      ],
+      "features": [
+        "Hero full-screen con fotografía del cordero al palo",
+        "Galería con carrusel mobile + lightbox con swipe",
+        "Reels de video lazy-loaded por viewport (IntersectionObserver)",
+        "Formulario → WhatsApp con mensaje de cotización armado",
+        "Schema.org LocalBusiness + FAQ + VideoObject",
+        "Panel de reseñas de Google integrado",
+        "SEO local optimizado para Hijuelas y V Región"
+      ],
+      "image": "https://fertomart.cl/og-image.jpg",
+      "gallery": [
+        "https://fertomart.cl/og-image.jpg",
+        "https://images.unsplash.com/photo-1544025162-d76694265947?w=1200&h=900&fit=crop",
+        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&h=900&fit=crop"
+      ],
+      "demoUrl": "https://fertomart.cl/",
+      "repoUrl": "https://github.com/tomasvergaraj/fertomart-landing",
+      "category": "Frontend"
+    },
+    {
+      "id": 11,
+      "title": "Bugueño Hormigones",
+      "slug": "bugueno-hormigones",
+      "shortDescription": "Landing corporativa para planta certificada de hormigón en Hijuelas, enfocada en captar cotizaciones desde WhatsApp para toda la Quinta Región.",
+      "fullDescription": "Landing page para Bugueño Hormigones, empresa especializada en venta y despacho de hormigón premezclado en la Quinta Región. Diseñada con foco en conversión rápida: secciones de confianza para mostrar la planta certificada, galería de faenas y flota, cobertura regional visible y CTAs directos a WhatsApp, teléfono y correo. Optimizada para SEO local en Hijuelas y comunas cercanas.",
+      "problem": "Una planta certificada de hormigón con clientela técnica necesitaba una vitrina online profesional que generara confianza y permitiera cotizar rápido sin formularios largos.",
+      "solution": "Construí una landing limpia y rápida con secciones de confianza (planta, certificaciones, flota), galería de proyectos ejecutados y CTAs múltiples a WhatsApp con mensajes pre-armados, optimizada para SEO local.",
+      "technologies": [
+        "React",
+        "Vite",
+        "CSS3",
+        "WhatsApp"
+      ],
+      "features": [
+        "Landing enfocada en cotización rápida",
+        "Posicionamiento local Hijuelas + Quinta Región",
+        "Secciones de confianza: planta, certificaciones, flota",
+        "CTAs directos a WhatsApp, teléfono y correo",
+        "Galería de faenas, flota y proyectos ejecutados",
+        "Cobertura regional y asesoría comercial visible"
+      ],
+      "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=900&fit=crop",
+      "gallery": [
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=900&fit=crop",
+        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=900&fit=crop",
+        "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=900&fit=crop"
+      ],
+      "demoUrl": "https://buguenohormigones.cl/",
+      "repoUrl": "",
+      "category": "Frontend"
     }
   ]
 }

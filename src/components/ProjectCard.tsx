@@ -2,6 +2,7 @@ import type { KeyboardEvent } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Project } from '../types';
+import TechBadges from './TechBadges';
 
 interface ProjectCardProps {
   project: Project;
@@ -54,10 +55,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         <p className="text-ink-600 dark:text-ink-300 text-sm leading-relaxed mb-4 line-clamp-2">
           {project.shortDescription}
         </p>
-        <p className="font-mono text-xs text-ink-500 dark:text-ink-400">
-          {project.technologies.slice(0, 4).join(' · ')}
-          {project.technologies.length > 4 && ` · +${project.technologies.length - 4}`}
-        </p>
+        <TechBadges technologies={project.technologies} max={4} size="sm" />
       </div>
     </motion.div>
   );

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import projectsData from '../data/projects.json';
 import { Project } from '../types';
 import { usePageTitle } from '../hooks/usePageTitle';
+import TechBadges from '../components/TechBadges';
 
 const FEATURED_SLUGS = ['nexo-fitness', 'hambuscador', 'minimarket-pos'];
 
@@ -149,9 +150,7 @@ const Home = () => {
                     <p className="text-ink-600 dark:text-ink-300 leading-relaxed mb-4">
                       {project.shortDescription}
                     </p>
-                    <p className="font-mono text-xs text-ink-500 dark:text-ink-400">
-                      {project.technologies.slice(0, 4).join(' · ')}
-                    </p>
+                    <TechBadges technologies={project.technologies} max={5} size="sm" />
                   </div>
                 </Link>
               </motion.article>
