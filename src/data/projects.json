@@ -394,6 +394,40 @@
       "demoUrl": "https://buguenohormigones.cl/",
       "repoUrl": "",
       "category": "Frontend"
+    },
+    {
+      "id": 12,
+      "title": "NexoCotiza",
+      "slug": "nexocotiza",
+      "shortDescription": "Herramienta web para crear cotizaciones profesionales y descargarlas en PDF o Word, 100% en el navegador, sin registro.",
+      "fullDescription": "NexoCotiza es un producto de Nexo Software SpA que permite a pymes y freelancers en Chile crear cotizaciones profesionales y exportarlas a PDF o Word en minutos. Funciona 100% en el navegador, sin backend y sin registro: los datos de la empresa, el logo y el borrador se guardan localmente en IndexedDB. Trata CLP, RUT (validación módulo 11) e IVA chilenos como ciudadanos de primera clase, con una tabla de ítems que calcula neto, IVA y total en tiempo real. Construido con Astro y React, instalable como PWA y operativo offline.",
+      "problem": "Las pymes y freelancers necesitan enviar cotizaciones de aspecto profesional sin pagar software contable ni aprender herramientas complejas, muchas veces desde el celular y sin ganas de crear una cuenta.",
+      "solution": "Desarrollé una herramienta gratuita que arma la cotización y la exporta a PDF o Word directamente en el navegador, con cálculo automático de IVA, validación de RUT y guardado local, sin servidores ni registro.",
+      "technologies": [
+        "Astro",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "IndexedDB",
+        "PWA"
+      ],
+      "features": [
+        "Cotizaciones exportables a PDF y a Word (.docx)",
+        "Cálculo automático de neto, IVA y total",
+        "Validación de RUT chileno (módulo 11) y formato CLP",
+        "Datos de empresa, logo y borrador guardados en el navegador",
+        "Historial de cotizaciones local",
+        "PWA instalable y operación offline"
+      ],
+      "image": "/nexocotiza.png",
+      "gallery": [
+        "/nexocotiza.png",
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://cotiza.nexosoftware.cl",
+      "repoUrl": "https://github.com/tomasvergaraj/nexo-cotiza",
+      "category": "Frontend"
     }
   ]
 }
