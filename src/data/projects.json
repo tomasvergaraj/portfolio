@@ -428,6 +428,42 @@
       "demoUrl": "https://cotiza.nexosoftware.cl",
       "repoUrl": "https://github.com/tomasvergaraj/nexo-cotiza",
       "category": "Frontend"
+    },
+    {
+      "id": 13,
+      "title": "Nexo Transcriptor",
+      "slug": "nexo-transcriptor",
+      "shortDescription": "App fullstack que transcribe audio a texto con Whisper y lo exporta a Word, con cola de trabajos y progreso en tiempo real.",
+      "fullDescription": "Nexo Transcriptor es una herramienta de Nexo Software SpA que convierte grabaciones de audio en texto editable y lo exporta a un documento Word (.docx). El backend en FastAPI usa faster-whisper (CTranslate2) para transcribir, con una cola persistente Redis + Celery que desacopla la web del procesamiento y reporta el progreso por segmento en tiempo real. El frontend en React permite editar el texto, mostrar marcas de tiempo y descargar el .docx. Todo containerizado con Docker (web, worker, Redis y nginx) y listo para desplegar con Caddy y TLS automático. El audio se procesa en el servidor y se borra apenas termina.",
+      "problem": "Transcribir reuniones, entrevistas o notas de voz a mano es lento y tedioso, y las herramientas en la nube obligan a subir audio sensible a terceros y a crear cuentas.",
+      "solution": "Construí una app fullstack autohospedable que transcribe con Whisper en el servidor, con cola de trabajos para escalar, progreso real por segmento, edición del texto y exportación a Word, sin depender de servicios de terceros.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "Python",
+        "faster-whisper",
+        "Redis",
+        "Celery",
+        "Docker"
+      ],
+      "features": [
+        "Transcripción de audio a texto con faster-whisper (Whisper)",
+        "Cola persistente Redis + Celery, escalable por workers",
+        "Progreso real por segmento con vista previa en vivo",
+        "Edición del texto y marcas de tiempo, exportación a Word (.docx)",
+        "Cancelación de trabajos y recuperación tras recargar la página",
+        "Despliegue con Docker + Caddy (TLS automático)"
+      ],
+      "image": "/nexo-transcriptor.png",
+      "gallery": [
+        "/nexo-transcriptor.png",
+        "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=600&fit=crop"
+      ],
+      "demoUrl": "https://transcribe.nexosoftware.cl",
+      "repoUrl": "https://github.com/tomasvergaraj/nexo-transcriptor",
+      "category": "Full Stack"
     }
   ]
 }
