@@ -37,7 +37,7 @@ const About = () => {
       link: 'https://nexosoftware.cl/',
     },
     {
-      role: 'Junior Full Stack Developer',
+      role: 'Full Stack Developer',
       company: 'HBQP',
       period: '2025 — Presente',
       description: 'Desarrollo de aplicaciones web escalables con React y Node.js.',
