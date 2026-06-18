@@ -60,7 +60,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/tomasvergaraj', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/tomas-vergara-5ba752216/', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/tomasvergaraj/', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/tomasvergar4/', label: 'Instagram' },
   ];
 
