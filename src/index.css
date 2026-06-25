@@ -19,6 +19,20 @@
   ::selection {
     @apply bg-ink-800 text-paper;
   }
+
+  /* Color del grano de papel (PaperGrain): tinta en claro, luz en oscuro.
+     Como custom property, cambia instantáneo al togglear tema (no transiciona),
+     a diferencia de body.color, que sí lo hace y dejaría el grano sin contraste. */
+  :root {
+    --grain-rgb: 20 28 40;
+    /* Tinta del retrato halftone (HalftonePortrait): ink-800 en claro, ink-100 en
+       oscuro. Custom property = cambia instantáneo al togglear tema (sin transición). */
+    --halftone-ink-rgb: 30 42 58;
+  }
+  .dark {
+    --grain-rgb: 229 234 241;
+    --halftone-ink-rgb: 229 234 241;
+  }
 }
 
 @layer components {

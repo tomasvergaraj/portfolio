@@ -5,6 +5,8 @@ import projectsData from '../data/projects.json';
 import { Project } from '../types';
 import { usePageTitle } from '../hooks/usePageTitle';
 import TechBadges from '../components/TechBadges';
+import PaperGrain from '../components/PaperGrain';
+import HalftonePortrait from '../components/HalftonePortrait';
 
 const FEATURED_SLUGS = ['nexo-fitness', 'hambuscador', 'minimarket-pos'];
 
@@ -18,8 +20,9 @@ const Home = () => {
 
   return (
     <div>
-      <section className="pt-40 pb-32">
-        <div className="container-custom">
+      <section className="pt-40 pb-32 relative overflow-hidden">
+        <PaperGrain />
+        <div className="container-custom relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -49,12 +52,7 @@ const Home = () => {
               className="lg:col-span-4 hidden lg:block"
             >
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-ink-200 dark:border-ink-800">
-                <img
-                  src="/profile.jpg"
-                  alt="Tomas Vergara"
-                  className="w-full h-full object-cover grayscale"
-                  loading="eager"
-                />
+                <HalftonePortrait src="/profile.jpg" alt="Tomas Vergara" />
               </div>
             </motion.div>
           </div>
